@@ -45,7 +45,6 @@ variable "iam_roles" {
   default     = []
   description = "A list of IAM roles to associate with the namespace."
 }
-
 variable "namespace_name" {
   type        = string
   default     = ""

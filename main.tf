@@ -48,7 +48,7 @@ resource "aws_redshiftserverless_namespace" "namespace" {
   admin_user_password  = var.admin_user_password == "" ? join("", random_password.master_password.*.result) : var.admin_user_password
   db_name              = var.db_name
   default_iam_role_arn = var.iam_role_enabled ? join("", aws_iam_role.role.*.arn) : ""
-  iam_roles            = var.iam_role_enabled ? [join("", aws_iam_role.role.*.arn)] : []
+  iam_roles            = var.iam_roles
   kms_key_id           = var.kms_enabled == true ? join("", aws_kms_key.kms.*.arn) : var.kms_key_id
   log_exports          = var.log_exports
   tags                 = var.tags
