@@ -59,6 +59,7 @@ resource "aws_redshiftserverless_workgroup" "workgroup" {
   namespace_name       = join("", aws_redshiftserverless_namespace.namespace.*.id)
   workgroup_name       = var.workgroup_name
   base_capacity        = var.base_capacity
+  max_capacity         = var.max_capacity
   enhanced_vpc_routing = var.enhanced_vpc_routing
   publicly_accessible  = var.publicly_accessible
   security_group_ids   = var.security_group_ids

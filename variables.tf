@@ -99,6 +99,12 @@ variable "base_capacity" {
   description = "The base data warehouse capacity of the workgroup in Redshift Processing Units (RPUs)."
 }
 
+variable "max_capacity" {
+  type        = number
+  default     = 64
+  description = "The max data warehouse capacity of the workgroup in Redshift Processing Units (RPUs)."
+}
+
 variable "enhanced_vpc_routing" {
   type        = bool
   default     = null
