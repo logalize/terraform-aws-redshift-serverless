@@ -24,6 +24,7 @@
 | <a name="input_amount"></a> [amount](#input\_amount) | The limit amount. If time-based, this amount is in Redshift Processing Units (RPU) consumed per hour. If data-based, this amount is in terabytes (TB) of data transferred between Regions in cross-account sharing. The value must be a positive number. | `number` | `60` | no |
 | <a name="input_assume_role_policy"></a> [assume\_role\_policy](#input\_assume\_role\_policy) | Policy that grants an entity permission to assume the role. | `any` | `null` | no |
 | <a name="input_base_capacity"></a> [base\_capacity](#input\_base\_capacity) | The base data warehouse capacity of the workgroup in Redshift Processing Units (RPUs). | `number` | `28` | no |
+| <a name="input_max_capacity"></a> [base\_capacity](#input\_base\_capacity) | The max data warehouse capacity of the workgroup in Redshift Processing Units (RPUs). | `number` | `28` | no |
 | <a name="input_breach_action"></a> [breach\_action](#input\_breach\_action) | The action that Amazon Redshift Serverless takes when the limit is reached. Valid values are log, emit-metric, and deactivate. The default is log. | `string` | `"log"` | no |
 | <a name="input_config_parameter"></a> [config\_parameter](#input\_config\_parameter) | An array of parameters to set for more control over a serverless database. | `list(any)` | `[]` | no |
 | <a name="input_create"></a> [create](#input\_create) | Determines whether to create Redshift cluster and resources (affects all resources) | `bool` | `true` | no |
@@ -58,6 +59,7 @@
 | <a name="input_snapshot_policy_enable"></a> [snapshot\_policy\_enable](#input\_snapshot\_policy\_enable) | If `true`, snapshot policy is enabled | `bool` | `false` | no |
 | <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | An array of VPC subnet IDs to use in the subnet group | `list(string)` | `null` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to add to all resources | `map(string)` | `{}` | no |
+| <a name="usage_limit_enable"></a> [usage_limit\_enable](#input\_usage_limit\_enable) | If `true`,  Usage limit is enabled | `bool` | `true` | no |
 | <a name="input_usage_type"></a> [usage\_type](#input\_usage\_type) | The type of Amazon Redshift Serverless usage to create a usage limit for. Valid values are serverless-compute or cross-region-datasharing. | `string` | `"serverless-compute"` | no |
 | <a name="input_workgroup_name"></a> [workgroup\_name](#input\_workgroup\_name) | The name of the workgroup. | `string` | `""` | no |
 ## Resources

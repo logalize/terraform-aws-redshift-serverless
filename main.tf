@@ -75,7 +75,7 @@ resource "aws_redshiftserverless_workgroup" "workgroup" {
 }
 
 resource "aws_redshiftserverless_usage_limit" "usage_limit" {
-  count         = var.create ? 1 : 0
+  count         = var.create && var.usage_limit_enable ? 1 : 0
   resource_arn  = join("", aws_redshiftserverless_workgroup.workgroup.*.arn)
   usage_type    = var.usage_type
   amount        = var.amount

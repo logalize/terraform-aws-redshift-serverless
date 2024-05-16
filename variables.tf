@@ -172,6 +172,12 @@ variable "endpoint_enable" {
   description = "If `true`,  VPC endpoint is enabled"
 }
 
+variable "usage_limit_enable" {
+  type        = bool
+  default     = true
+  description = "If `true`,  Usage limit is enabled"
+}
+
 variable "snapshot_enable" {
   type        = bool
   default     = false
